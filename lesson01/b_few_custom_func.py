@@ -19,7 +19,7 @@ def divided_by_digit(num, digit):
     """
     Возвращаем True если сумма цифр числа num делится нацело на digit, в противном случае False
     """
-    temp_list = list(map(lambda x: int(x), set(str(num))))
+    temp_list = list(map(lambda x: int(x), [char for char in str(num)]))
     if not (sum(temp_list) % digit):
         return True
     else:
@@ -35,8 +35,8 @@ source_list = list(map(lambda x: pow(x, 3), range(START_RANGE, FINISH_RANGE, 2))
 print(sum(list(filter(lambda x: divided_by_digit(x, 7), source_list))))
 
 # изменяем исходный список без создания нового
-for ind, val in enumerate(source_list):
-    source_list[ind] = source_list[ind] + 17
+for i in range(len(source_list)):
+    source_list[i] += 17
 
 # печатаем сумму чисел которые удовлетворяют условию функции divided_by_zero
 print(sum(list(filter(lambda x: divided_by_digit(x, 7), source_list))))
