@@ -11,6 +11,8 @@
 Результат работы:
 19668581477
 18820444868
+
++added to fix changes
 """
 
 def divided_by_digit(num, digit):
