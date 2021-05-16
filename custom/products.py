@@ -15,17 +15,16 @@ LIST_OF_PROPERTIES = ['название', "цена", "количество", "�
 products = []
 exitcode = True
 
-# стоит ли упрощать и использовать while True и break?
-while exitcode:
-    exitcode = True if input('Новый продукт? (д/н): ').upper() == "Д" else False
-    if exitcode:
-        my_dict = {}
-        for idx in LIST_OF_PROPERTIES:
-            my_dict[idx] = input(f'{idx}: ')
-        if len(products):
-            products.append((max(x[0] for x in products)+1, my_dict))
-        else:
-            products.append((1, my_dict))
+while True:
+    if input('Новый продукт? (д/н): ').upper() != "Д":
+        break
+    my_dict = {}
+    for idx in LIST_OF_PROPERTIES:
+        my_dict[idx] = input(f'{idx.title()}: ')
+    if len(products):
+        products.append((max(x[0] for x in products)+1, my_dict))
+    else:
+        products.append((1, my_dict))
 
 analytics = {}
 for record in products:
