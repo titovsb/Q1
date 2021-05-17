@@ -10,6 +10,10 @@
 Подумайте: полезен ли будет вам оператор распаковки? Сможете ли вы вернуть отсортированный по ключам словарь?
 """
 
-def thesaurus():
-    pass
+def thesaurus(*args):
+    for el in args:
+        print(el)
 
+name_list = ['Сергей', 'Яна', 'Яков', 'Света', 'Петр', 'Мария']
+
+my_thesaurus = thesaurus(*name_list)
