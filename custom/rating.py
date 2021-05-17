@@ -4,6 +4,14 @@
 
 rating = [7,5,3,3,2]
 
+# Этот код не соответствует условиям задачи, но мне видится проще и универсальнее.
+# while True:
+#     user_rating = int(input(f'Добавьте рейтинг {rating}: '))
+#     if not user_rating:
+#         break
+#     rating.append(user_rating)
+#     rating.sort(reverse=True)
+
 while True:
     user_rating = int(input(f'Добавьте рейтинг {rating}: '))
     if not user_rating:
