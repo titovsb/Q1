@@ -10,8 +10,7 @@ def num_translate(num: str) -> str:
     'five': 'пять', 'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять',
     'ten': 'десять',
     }
-    if num in LATTORUS_DICT:
-        return LATTORUS_DICT[num]
+    return LATTORUS_DICT.get(num)
 
 print('Для окончания работы введите Enter')
 while True:
