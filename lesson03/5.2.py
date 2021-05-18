@@ -16,18 +16,19 @@ def get_jokes(num=1, repeat=True) -> list:
     nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
     adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
     adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
-    idx = num
     jokes = list()
-    while idx and len(nouns):        # цикл по счетчику или если список не пуст
-        cur_noun = random.choice(nouns)
-        cur_adv = random.choice(adverbs)
-        cur_adj = random.choice(adjectives)
-        jokes.append(' '.join([cur_noun, cur_adv, cur_adj]))
-        if not repeat:
-            nouns.remove(cur_noun)
-            adverbs.remove(cur_adv)
-            adjectives.remove(cur_adj)
-        idx -= 1
+    while num and len(nouns):        # цикл по счетчику или если список не пуст
+        if repeat:
+            jokes.append(' '.join([random.choice(nouns),
+                                   random.choice(adverbs),
+                                   random.choice(adjectives)
+                                ]))
+        else:
+            jokes.append(' '.join([nouns.pop(random.randrange(len(nouns))),
+                                   adverbs.pop(random.randrange(len(adverbs))),
+                                   adjectives.pop(random.randrange(len(adjectives)))
+                                ]))
+        num -= 1
     return jokes
 
 
@@ -36,9 +37,9 @@ print(get_jokes(num=2))
 print(get_jokes(10, repeat=False))
 
 """
-['автомобиль вчера мягкий']
-['город сегодня утопичный', 'лес сегодня веселый']
-['автомобиль сегодня зеленый', 'лес позавчера утопичный', 'дом вчера яркий', 'огонь завтра веселый', 'город ночью мягкий']
+['дом ночью зеленый']
+['лес завтра утопичный', 'лес вчера утопичный']
+['огонь позавчера зеленый', 'город вчера мягкий', 'дом завтра веселый', 'автомобиль ночью утопичный', 'лес сегодня яркий']
 """
 
 

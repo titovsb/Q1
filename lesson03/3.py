@@ -10,7 +10,7 @@ def thesaurus(*args):
         out_thesaurus[el] = list(filter(lambda x : x[0] == el, args))
     return out_thesaurus
 
-print(thesaurus('Сергей', 'Яна', 'Яков', 'Света', 'Петр', 'Мария'))
+print(thesaurus('Сергей', 'Яна', 'Яков', 'Света', 'Петр', 'Мария', 'Михаил'))
 
 """
 Отсортированный по ключам словарь:
