@@ -25,9 +25,11 @@ def currency_rate2(cur_find:str) -> dict:
             dd = xml.get(xml.keys()[0])
             getcontext().prec = 6
             tmp = value.split(',')
-            return {'date': datetime.date(*map(int, '22.05.2021'.split('.')[::-1]))},\
-                   {'charcode': charcode},\
-                   {'currency': (Decimal(tmp[0]) + Decimal(tmp[1])/10000)/ Decimal(nominal)}
+            dict_out = {}
+            dict_out['date'] = datetime.date(*map(int, '22.05.2021'.split('.')[::-1]))
+            dict_out['charcode'] = charcode
+            dict_out['currency'] = (Decimal(tmp[0]) + Decimal(tmp[1])/10000)/ Decimal(nominal)
+            return dict_out
     else:
         return None
 
