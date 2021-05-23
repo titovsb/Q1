@@ -3,6 +3,9 @@
 {"И": ["Иван", "Илья"], "М": ["Мария"], "П": ["Петр"]}
 """
 
+from 1 import num_translate
+
+
 def thesaurus(*args):
     key_chars = sorted(set(x[0] for x in args))
     out_thesaurus = dict()

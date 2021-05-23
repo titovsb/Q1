@@ -30,7 +30,6 @@ def get_jokes(num=1, repeat=True) -> list:
         idx -= 1
     return jokes
 
-
 print(get_jokes())
 print(get_jokes(num=2))
 print(get_jokes(10, repeat=False))
