@@ -46,6 +46,9 @@ if __name__ == '__main__':
     tmp = currency_rate('Kzt')     # Nominal = 100
     print(type(tmp), tmp)
 
-
-
-
+"""
+<class 'decimal.Decimal'> 73.5803
+<class 'decimal.Decimal'> 89.9446
+<class 'NoneType'> None
+<class 'decimal.Decimal'> 0.171534
+"""

@@ -41,5 +41,14 @@ if __name__ == '__main__':
     print(type(tmp), tmp)
 
 
+"""
+Понятно, что надо округлять, но надо учесть множитель..
+<class 'float'> 73.5803
+<class 'float'> 89.9446
+<class 'NoneType'> None
+<class 'float'> 0.17153400000000002
+"""
+
+
 
 
