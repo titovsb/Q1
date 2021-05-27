@@ -10,7 +10,7 @@ from decimal import *
 import datetime
 
 
-def currency_rate2(cur_find:str) -> None:
+def currency_rate2(cur_find:str) -> dict:
     """
     Return CBR rate for cur_str
     :param cur_find:
