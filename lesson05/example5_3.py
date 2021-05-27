@@ -18,7 +18,7 @@ print(list(f))
 
 getcontext().prec = 3
 finish = perf_counter()
-print(f'{Decimal(finish) - Decimal(start)} сек')
+print(f'{Decimal(finish/10000) - Decimal(start/10000)} сек')
 
 
 '''
