@@ -11,7 +11,7 @@ with open(FILENAME) as f:
         ips.setdefault(ip, 0)
         ips[ip] += 1
     motivator = max(ips, key=ips.get)
-    print(motivator, ips[motivator])
+print(motivator, ips[motivator])
 
 '''
 216.46.173.126 2350

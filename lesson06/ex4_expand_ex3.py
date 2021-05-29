@@ -7,10 +7,13 @@ USERS_FILE = 'users.csv'
 RESULT_FILE = 'users_hobby.txt'
 
 with open(USERS_FILE) as u, open(HOBBY_FILE) as h, open(RESULT_FILE,'w') as r:
-    for user in u.readlines():
+    user = u.readline()
+    while user:
         user = user.strip()
         hobby = h.readline().strip()
         print(f'{user}: {hobby if hobby else "None"}', file=r)
+        user = u.readline()
+
 
 '''
 users_hobby.txt ->

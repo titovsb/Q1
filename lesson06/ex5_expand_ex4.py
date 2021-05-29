@@ -17,10 +17,12 @@ ap.add_argument('-r', '--result', required=False,
 args = vars(ap.parse_args())
 
 with open(args['users']) as u, open(args['hobby']) as h, open(args['result'],'w') as r:
-    for user in u.readlines():
+    user = u.readline()
+    while user:
         user = user.strip()
         hobby = h.readline().strip()
         print(f'{user}: {hobby if hobby else "None"}', file=r)
+        user = u.readline()
 
 with open(args['result']) as f:
     print(f.read())
