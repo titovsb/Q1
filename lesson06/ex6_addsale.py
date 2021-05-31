@@ -3,6 +3,10 @@
 '''
 import sys
 
+
+def convert_value(val:str) -> str:
+    pass
+
 FILENAME = 'bakery.csv'
 
 if len(sys.argv) == 2:
@@ -10,4 +14,3 @@ if len(sys.argv) == 2:
         print(sys.argv[1], file=f)
 else:
     print('Введите значение в командной строке.')
-
