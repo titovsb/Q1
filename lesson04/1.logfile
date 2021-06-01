@@ -1,0 +1,83 @@
+#1. Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию.
+
+$pip freeze | grep -i pillow
+Pillow==8.1.2
+
+$pip list | grep -i pillow
+Pillow                           8.1.2
+
+$pip show pillow
+Name: Pillow
+Version: 8.1.2
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: /usr/lib/python3/dist-packages
+Requires:
+Required-by: instagram-private-api-extensions, imageio, face-recognition
+
+
+Установить самую свежую версию pillow, если ранее она не была установлена. Сделать подтверждающий скриншот.
+
+$pip install pillow
+Requirement already satisfied: pillow in /usr/lib/python3/dist-packages (8.1.2)
+
+
+Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+
+$python --version
+Python 3.9.2
+
+#apt install python3-venv
+Чтение списков пакетов… Готово
+...
+Настраивается пакет python3-venv (3.9.2-3) …
+Launchers are updated
+
+$python -m venv myenv
+$ls | grep -i myenv
+myenv
+
+$source myenv/bin/activate
+(myenv)
+└──╼ $pip list
+Package       Version
+------------- -------
+pip           20.3.4
+pkg-resources 0.0.0
+setuptools    44.1.1
+
+
+Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+Сделать подтверждающий скриншот.
+
+$pip install requests pillow
+(myenv)
+└──╼ $pip list
+Package       Version
+------------- ---------
+certifi       2020.12.5
+chardet       4.0.0
+idna          2.10
+Pillow        8.2.0
+pip           20.3.4
+pkg-resources 0.0.0
+requests      2.25.1
+setuptools    44.1.1
+urllib3       1.26.4
+
+
+Деактивировать виртуальное окружение. Сделать подтверждающий скриншот.
+
+(myenv) ┌─[master@parrot]─[~/PycharmProjects/Q1/lesson04]
+└──╼ $deactivate
+┌─[master@parrot]─[~/PycharmProjects/Q1/lesson04]
+└──╼ $
+
+
+Скрины нумеровать двухразрядными числами, например: «01.jpg», «02.jpg». Если будут
+проблемы с pillow - можно поработать с другим пакетом: например, requests.
+
+** Скриншоты заменены логами командной строки.
