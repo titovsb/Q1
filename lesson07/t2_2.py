@@ -20,3 +20,27 @@ with open('config.yaml') as f:
     lines = yaml.safe_load(f)
 
 my_walk(**lines)
+
+'''
+Создали каталог my_project
+Создали каталог my_project/settings/
+Новый файл: __init__.py в каталоге my_project/settings/
+Новый файл: dev.py в каталоге my_project/settings/
+Новый файл: prod.py в каталоге my_project/settings/
+Создали каталог my_project/mainapp/
+Новый файл: __init__.py в каталоге my_project/mainapp/
+Новый файл: models.py в каталоге my_project/mainapp/
+Новый файл: views.py в каталоге my_project/mainapp/
+Создали каталог my_project/mainapp/templates/
+Создали каталог my_project/mainapp/templates/mainapp/
+Новый файл: base.html в каталоге my_project/mainapp/templates/mainapp/
+Новый файл: index.html в каталоге my_project/mainapp/templates/mainapp/
+Создали каталог my_project/authapp/
+Новый файл: __init__.py в каталоге my_project/authapp/
+Новый файл: models.py в каталоге my_project/authapp/
+Новый файл: views.py в каталоге my_project/authapp/
+Создали каталог my_project/authapp/templates/
+Создали каталог my_project/authapp/templates/authapp/
+Новый файл: base.html в каталоге my_project/authapp/templates/authapp/
+Новый файл: index.html в каталоге my_project/authapp/templates/authapp/
+'''

@@ -17,7 +17,26 @@ for k, v in lines.items():
         with open(os.path.join(os.curdir, basedir, k, i), "w") as f:
             print(f'Создан файл: {i} в каталоге {k}')
 
+'''
+Создан каталог: settings
+Создан файл: __init__.py в каталоге settings
+Создан файл: dev.py в каталоге settings
+Создан файл: prod.py в каталоге settings
+Создан каталог: mainapp
+Создан файл: __init__.py в каталоге mainapp
+Создан файл: models.py в каталоге mainapp
+Создан файл: views.py в каталоге mainapp
+Создан каталог: mainapp/templates/mainapp
+Создан файл: base.html в каталоге mainapp/templates/mainapp
+Создан файл: index.html в каталоге mainapp/templates/mainapp
+Создан каталог: authapp
+Создан файл: __init__.py в каталоге authapp
+Создан файл: models.py в каталоге authapp
+Создан файл: views.py в каталоге authapp
+Создан каталог: authapp/templates/authapp
+Создан файл: base.html в каталоге authapp/templates/authapp
+Создан файл: index.html в каталоге authapp/templates/authapp
+'''
 
 
-    # print(basedir)
-    # pprint(lines, indent=2)
+
