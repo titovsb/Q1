@@ -134,3 +134,4 @@ dmypy.json
 .pyre/
 lesson07/my_project
 lesson07/templates
+nginx_logs

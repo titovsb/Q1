@@ -10,7 +10,7 @@ import re
 
 
 def email_parse(email):
-    regexp = re.compile(r'[\w*\.]+@[\w*]+\.[\w*\.]+')
+    regexp = re.compile(r'[\w\.]+@[\w]+\.[\w\.]+')
     result = regexp.match(email)
     if result:
         return dict(zip(['username','domain'], result.group().split('@')))
