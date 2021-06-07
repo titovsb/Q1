@@ -1,19 +1,25 @@
 '''
-парсим nginx_log вооружившись регулярными выражениями
+парсим nginx_log вооружившись регулярными выражениями учитываем особые строки
 '''
 
 import re
 
-LOG = 'nginx_logs'
+LOG = 'nginx_logs_part'
 
 def log_parse(src):
-    re_list = [r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}',
+    re_list = [r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s',
                r'\[(.*?)\]',
                r'\"([A-Z]{3})',
                r'\s(\/[\w\/]+)',
                r'\s(\d{3})\s',
                r'\s\d{3}\s(\d+)']
-    return tuple(re.findall(x,src)[0] for x in re_list)
+    try:
+        result = tuple(re.findall(x, src)[0] for x in re_list)
+    except IndexError:  # шаблон для особых строк
+        re_list[0] = '([0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4})\s'
+        result = tuple(re.findall(x, src)[0] for x in re_list)
+    return result
+
 
 if __name__ == '__main__':
     with open(LOG) as f:
