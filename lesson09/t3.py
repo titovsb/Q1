@@ -12,7 +12,7 @@ class Worker:
     def set_income(self, wage, bonus):
         self._income = {'wage': wage, 'bonus': bonus}
 
-    def get_fullname(self):  # будем наследовать из родителя
+    def get_fullname(self):  # будем наследовать отсюда
         return ' '.join([self.name, self.surname, self.position])
 
 class Position(Worker):
