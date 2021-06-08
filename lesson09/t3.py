@@ -31,3 +31,10 @@ if __name__ == '__main__':
 
     b = Position('Петрова','Оксана', 'секретарь', 11, bonus=22)
     print(Position.get_fullname(b), Position.get_total_income(b))
+
+
+'''
+Иванов Иван директор 0
+Иванов Иван директор 15
+Петрова Оксана секретарь 33
+'''

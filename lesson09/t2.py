@@ -27,6 +27,7 @@ if __name__ == '__main__':
     b = Road(100, width=6)
     pprint(Road.get_param(b), indent=2)
 
+
 '''
 { 'length': (0, 'm'),
   'massa': (1.5, 't'),
@@ -39,5 +40,4 @@ if __name__ == '__main__':
   'tickness': (0.05, 'm'),
   'volume': (45.0, 'm3'),
   'width': (6, 'm')}
-
 '''

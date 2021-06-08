@@ -75,3 +75,19 @@ if __name__ == '__main__':
     print(mini.show_speed())
     print(solaris.show_speed())
     print(guard.show_speed())
+
+
+'''
+BMW, 0
+MINI, 0
+SOLARIS, 0
+POLICE, 0
+BMW поехала на юг...
+MINI поехала на север...
+SOLARIS поехала на север...
+POLICE поехала на край света...
+BMW, 90
+MINI, 50
+SOLARIS, 120. Превышение скорости.
+POLICE, 200. Ему можно превышать.
+'''
