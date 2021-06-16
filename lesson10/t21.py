@@ -5,7 +5,6 @@ class Clothes as abstract
 from abc import ABC, abstractmethod
 
 class Clothes(ABC):
-
     @property
     @abstractmethod
     def volume(self):

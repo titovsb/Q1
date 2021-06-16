@@ -28,12 +28,12 @@ class Matrix:
             raise IndexError('Матрицы должны быть одноразмерны.')
         return z
 
-
     def __str__(self):
         result = ''
         for row in range(self.rows):
             result += ' '.join(map(str, self.m1[row])) + '\n'
         return result
+
 
 if __name__ == '__main__':
 

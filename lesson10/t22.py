@@ -26,6 +26,7 @@ class Suit(Clothes):        # Костюм
     def __init__(self, xH=0, name='Костюм'):
         self.__H = xH
         self.name = name
+
     @property
     def volume(self):
         return round(2*self.__H + 0.3, 2)
@@ -41,10 +42,12 @@ class Suit(Clothes):        # Костюм
         else:
             raise ValueError('Значение должно быть целым и больше 0')
 
+
 class Coat(Clothes):        # Пальто
     def __init__(self, xV, name='Пальто'):
         self.__V = xV
         self.name = name
+
     @property
     def volume(self):
         return round(self.__V/6.5 + 0.5, 2)
