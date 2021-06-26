@@ -14,7 +14,7 @@ class MyDate:
         tmp = re.findall(r'(\d{2})-(\d{2})-(\d{4})', str)
         if self.is_validdate(tmp):
             self.day, self.mon, self.year = \
-                    list(map(int, [i for i in tmp, str)[0]]))
+                    list(map(int, [i for i in tmp[0]]))
         else:
             raise ValueError('Неверный формат даты')
 
@@ -33,7 +33,7 @@ class MyDate:
                 return True
         return False
 
-a = MyDate('01-44-1900')
+a = MyDate('01-04-1900')
 print(a, type(a))
-a = MyDate.input_date('01-04-1900')
+a = MyDate('01-44-1900')
 print(a, type(a))
